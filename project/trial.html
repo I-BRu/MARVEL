@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="trial.css">
+
+    <!--link for swiper -->
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <section class="popular section" id="popular">
+        <!--HEading-->
+        <div class="heading">
+            <h2 class="heading-title">popula Movies</h2>
+        </div>
+        <!--Content-->
+        <div class="popular-content swiper">
+            <div class="swiper-wrapper">
+                <!----Movies box 1 -->
+                <div class="swiper-slide">
+                    <div class="movies-box">
+                        <img src="iron man 1.png" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">IRON MAN </h2>
+                            <span class="movie-type">ACTION</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!----Movies box 2 -->
+                <div class="swiper-slide">
+                    <div class="movies-box">
+                        <img src="iron man 1.png" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">IRON MAN </h2>
+                            <span class="movie-type">ACTION</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!----Movies box 3 -->
+                <div class="swiper-slide">
+                    <div class="movies-box">
+                        <img src="iron man 1.png" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">IRON MAN </h2>
+                            <span class="movie-type">ACTION</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!----Movies box 4 -->
+                <div class="swiper-slide">
+                    <div class="movies-box">
+                        <img src="iron man 1.png" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">IRON MAN </h2>
+                            <span class="movie-type">ACTION</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!----Movies box 5 -->
+                <div class="swiper-slide">
+                    <div class="movies-box">
+                        <img src="iron man 1.png" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">IRON MAN </h2>
+                            <span class="movie-type">ACTION</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!----Movies box 6 -->
+                <div class="swiper-slide">
+                    <div class="movies-box">
+                        <img src="iron man 1.png" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">IRON MAN </h2>
+                            <span class="movie-type">ACTION</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+
+
+        </div>
+
+    </section>
+
+
+    <!--popular section end -->
+    <link rel="stylesheet" href="swiper-bundle.min.js">
+
+    <script>
+        var swiper = new Swiper(".popular content", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>

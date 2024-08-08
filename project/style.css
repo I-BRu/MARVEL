@@ -1,0 +1,261 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+ .marvel {
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+    background-color: #080808;
+} 
+
+
+  
+
+ a{
+    text-decoration: none;
+}
+
+.navigation2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 50px;
+    max-width: 1400px;
+    margin: auto;
+    width: 100%;
+}
+
+.navigation2 .menu2-icon {
+    cursor: pointer;
+    float: right;
+    padding: 20px 10px;
+    z-index: 103;
+}
+
+.navigation2 .menu2-icon .nav2-icon {
+    background-color: #ffffffff;
+    display: block;
+    height: 100px;
+    width: 20px;
+    position: relative;
+    transition: background 0.2s ease-out;
+}
+
+.navigation2 .menu2-icon .nav2-icon::before,
+.navigation2 .menu2-icon .nav2-icon::after {
+    background-color: #ffffffff;
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all ease-out 0.2s;
+}
+
+.navigation2 .menu2-icon .nav2-icon::before {
+    top: 8px;
+}
+
+.navigation2 .menu2-icon .nav2-icon::after {
+    top: -8px;
+}
+
+.navigation2 .menu2-btn:checked~.menu2-icon .nav2-icon {
+    background-color: transparent;
+}
+
+.navigation2 .menu2-btn:checked~.menu2-icon .nav2-icon::before {
+    transform: rotate(-45deg);
+    top: 0px;
+}
+
+.navigation2 .menu2-btn:checked~.menu2-icon .nav2-icon::after {
+    transform: rotate(45deg);
+    top: 0px;
+}
+
+.menu2-btn {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #111111f1;
+    z-index: 102;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li a {
+    color: #ffffff;
+    margin: 0px 40px;
+    font-size: 2rem;
+    font-family: Monoton;
+    transition: all ease 0.3s;
+}
+
+.menu li a:hover {
+    font-size: 2.3rem;
+    color: #e70634;
+    transition: all ease 0.3s;
+}
+
+.navigation2 .menu2-btn:checked~.menu {
+    display: flex;
+}
+
+.logo2 {
+    color: #e70634;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0px auto 0px 40px;
+    display: flex;
+    align-items: center;
+    font-family: Monoton;
+    letter-spacing: 0px;
+}
+
+.logo2 span {
+    font-size: 0.7rem;
+    margin-left: 5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+section {
+    padding: 100px 200px;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #010c14;
+}
+
+.home:before {
+    z-index: 777;
+    content: '';
+    position: absolute;
+    background: rgba(10, 11, 11, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.home .content {
+    z-index: 888;
+    color: #fff;
+    width: 70%;
+    margin-top: 50px;
+}
+
+.home .content h1 {
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+}
+
+.home.content h1 span {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.home .content p {
+    margin-bottom: 65px;
+}
+
+.home.content a {
+    background: #fff;
+    padding: 15px 35px;
+    color: #1680AC;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.home video {
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-navigation {
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: cen ter;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active {
+    background: black;
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+    margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover {
+    transform: scale(1.2);
+}
+
+.video-slide {
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 50%);
+}
+
+.video-slide.active {
+    clip-path: circle(150% at 50%);
+}
+
+@media (max-width:1040px) {
+    header {
+        padding: 12px 20px;
+    }
+    section {
+        padding: 100px 20px
+    }
+    header .navigation {
+        position: relative;
+        display: none;
+    }
+}
+
