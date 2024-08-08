@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive website landing page with backgorund video slider</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png.jpg">
+    <!--link for swiper    -->
+
+    <link rel="stylesheet" href="css.css">
+
+    <!--=====import-poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicon@2.1.1/css/boxiconx.min.css">
+
+
+
+</head>
+
+<body>
+    <div class="marvel">
+    <nav class="navigation2">
+        <input type="checkbox" class="menu2-btn" id="menu2-btn">
+        <label for="menu2-btn" class="menu2-icon">
+            <span class="nav2-icon"></span>
+        </label>
+
+        <a href="index.html" class="logo2">
+            &#10084;<span>u3000</span>
+      </a>
+ 
+    </nav>
+
+    <div>
+        <section class="home">
+            <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+            <div class="content">
+                
+
+            </div>
+            <div class="slider-navigation">
+                <div class="nav-btn active"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+
+            </div>
+        </section>
+    </div>
+
+   
+
+
+    <script type="text/javascript">
+        //javascript for the content 
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        var sliderNav = function(manual) {
+            btns.forEach((btn) => {
+                btn.classList.remove("active")
+            });
+            slides.forEach((slide) => {
+                slide.classList.remove("active")
+            });
+
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i)
+            });
+        });
+    </script>
+
+</div>
+
+</body>
+
+
+</html>
