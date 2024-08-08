@@ -223,3 +223,81 @@ document.addEventListener("DOMContentLoaded", () => {
     searchMovies(e.target.value);
   });
 });
+
+let sortBy = 'title'; // Default sorting
+
+function sortMovies(movieList, criterion) {
+    return movieList.slice().sort((a, b) => {
+        if (criterion === 'title') {
+            return a.title.localeCompare(b.title);
+        } else if (criterion === 'year') {
+            return a.year - b.year;
+        }
+    });
+}
+
+function updateSort() {
+    sortBy = document.getElementById('sort-select').value;
+    const sortedMovies = sortMovies(movies, sortBy);
+    displayMovies(sortedMovies, currentPage);
+}
+
+
+
+function showMovieDetails(movie) {
+    const modal = document.getElementById('movie-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    const modalPoster = document.getElementById('modal-poster');
+    const modalYear = document.getElementById('modal-year');
+    const modalGenre = document.getElementById('modal-genre');
+
+    modalTitle.textContent = movie.title;
+    modalDescription.textContent = movie.description;
+    modalPoster.src = movie.poster;
+    modalYear.textContent = `Released: ${movie.year}`;
+    modalGenre.textContent = `Genre: ${movie.genre}`;
+
+    modal.style.display = 'block'; // Show modal
+}
+
+function closeModal() {
+    document.getElementById('movie-modal').style.display = 'none';
+}
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+
+
+function createMovieCard(movie) {
+    const card = document.createElement('div');
+    card.className = 'movie-card';
+    
+    const img = document.createElement('img');
+    img.src = movie.poster;
+    img.alt = `${movie.title} Poster`;
+    card.appendChild(img);
+
+    const title = document.createElement('h2');
+    title.textContent = movie.title;
+    card.appendChild(title);
+
+    const year = document.createElement('p');
+    year.className = 'movie-year';
+    year.textContent = `Released: ${movie.year}`;
+    card.appendChild(year);
+
+    const genre = document.createElement('p');
+    genre.className = 'movie-genre';
+    genre.textContent = `Genre: ${movie.genre}`;
+    card.appendChild(genre);
+
+    const description = document.createElement('p');
+    description.className = 'movie-description';
+    description.textContent = movie.description;
+    card.appendChild(description);
+
+    card.addEventListener('click', () => showMovieDetails(movie));
+
+    return card;
+}
+
